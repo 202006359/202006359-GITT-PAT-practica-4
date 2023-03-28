@@ -13,7 +13,7 @@
 
  public interface CreateQRService {
  
-    String generarQR(String size, String data);
+    Object generarQR(String size, String data);
  
  
  }

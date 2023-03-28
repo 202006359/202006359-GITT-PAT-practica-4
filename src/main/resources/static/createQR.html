@@ -59,11 +59,12 @@
     
     async function createQR(paginaweb){
       const img = document.getElementById('qr-code');
-      const apiUrl = 'https://api.qrserver.com/v1/create-qr-code/';
-      const queryParams = '?size=160x160&data=' + paginaweb;
+      const apiUrl = 'http://localhost:8888/icai/CreateQR'; //'https://api.qrserver.com/v1/create-qr-code/';
+      const size = '160x160'
+      const queryParams = '?size=' + size + '&data=' + paginaweb;
       const requestUrl = apiUrl + queryParams;
           
-      await fetch('http://localhost:8888/icai/CreateQR', {
+      await fetch('requestUrl', {
         method: 'GET'
       })
       .then(response => {

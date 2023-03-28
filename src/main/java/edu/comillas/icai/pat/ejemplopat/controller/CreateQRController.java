@@ -31,7 +31,7 @@
      
      
      @GetMapping("/CreateQR")
-     public ResponseEntity<Object> health(@RequestParam(required = true) String size, @RequestParam(required = true) String data) {
+     public ResponseEntity<Object> loquequiera(@RequestParam(required = true) String size, @RequestParam(required = true) String data) {
          
          if (data == null) {
              data ="https://github.com/202006359";
