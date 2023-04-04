@@ -63,8 +63,10 @@
       const size = '160x160'
       const queryParams = '?size=' + size + '&data=' + paginaweb;
       const requestUrl = apiUrl + queryParams;
+
+      //prueba = 'http://localhost:8888/icai/CreateQR?size=160x160&data=https://github.com';
           
-      await fetch('requestUrl', {
+      await fetch(requestUrl, {
         method: 'GET'
       })
       .then(response => {

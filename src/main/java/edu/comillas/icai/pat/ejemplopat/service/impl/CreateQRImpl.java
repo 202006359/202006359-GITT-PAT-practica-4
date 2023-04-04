@@ -13,6 +13,7 @@ package edu.comillas.icai.pat.ejemplopat.service.impl;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -26,7 +27,7 @@ import edu.comillas.icai.pat.ejemplopat.service.CreateQRService;
     RestTemplate restTemplate;
 
      @Override
-     public Object generarQR(String size, String data) {
+     public byte[] generarQR(String size, String data) {
          
  
 
@@ -34,9 +35,8 @@ import edu.comillas.icai.pat.ejemplopat.service.CreateQRService;
         String queryParams = "?size=" + size + "&data=" + data;
         String url = "https://api.qrserver.com/v1/create-qr-code/" + queryParams;
 
-        Object response = restTemplate.getForEntity(url,Object.class);
-
-        return response;
+        ResponseEntity<byte[]> response = restTemplate.getForEntity(url, byte[].class);
+        return response.getBody();
      }
  
  
