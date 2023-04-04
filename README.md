@@ -8,7 +8,8 @@ La estructura del proyecto es:
  - **/service/impl:**  Implementación de la capa de servicios. En estas clases se implementa la capa de negocio de los microservicios
  - **/resources/static:** Contenido del HTML, JS y CSS del portal Web
 
-
+## Instrucciones de uso
+> Levantar el servicio: Darle a run en la clase QRApplication, está se encargará de arrancar en Spring Boot
 ## Operaciones disponibles
 
 El servicio actualmente implementa un servicio de llamada a una API, esta API lo que hace es devolver una imagen con el QR solicitado. Admite como parámetro en la URL (Query-param) el size *"160x160"* y el data *"https://github.com"*. Ambos campos son obligatorios, aunque el de size no lo puede tocar el usuario.
