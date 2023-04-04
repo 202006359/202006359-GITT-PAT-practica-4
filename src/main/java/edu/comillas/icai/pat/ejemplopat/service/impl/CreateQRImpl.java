@@ -15,33 +15,34 @@ package edu.comillas.icai.pat.ejemplopat.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import edu.comillas.icai.pat.ejemplopat.service.CreateQRService;
- 
- 
- 
- @Service
- public class CreateQRImpl implements CreateQRService {
+import lombok.extern.slf4j.Slf4j;
+
+
+
+@Service
+@Slf4j
+public class CreateQRImpl implements CreateQRService {
     @Autowired
     RestTemplate restTemplate;
 
-     @Override
-     public byte[] generarQR(String size, String data) {
-         
- 
+    @Override
+    public byte[] generarQR(String size, String data) throws Exception {
+        try {
+            String queryParams = "?size=" + size + "&data=" + data;
+            String url = "https://api.qrserver.com/v1/create-qr-code/" + queryParams;
 
+            log.info("Calling QR server API with URL: {}", url);
+            ResponseEntity<byte[]> response = restTemplate.getForEntity(url, byte[].class);
 
-        String queryParams = "?size=" + size + "&data=" + data;
-        String url = "https://api.qrserver.com/v1/create-qr-code/" + queryParams;
-
-        ResponseEntity<byte[]> response = restTemplate.getForEntity(url, byte[].class);
-        return response.getBody();
-     }
- 
- 
- 
- 
-     
- }
- 
+            log.info("QR server API call successful with status code: {}", response.getStatusCode().value());
+            return response.getBody();
+        } catch (RestClientException e) {
+            log.error("Error calling QR server API: {}", e.getMessage());
+            throw new Exception("Error calling QR server API: " + e.getMessage());
+        }
+    }
+}
