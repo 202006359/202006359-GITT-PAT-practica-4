@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.GetMapping;
      @Autowired
      CreateQRService qrService;
      
-     @CrossOrigin(origins = "http://127.0.0.1:5500/")
+     //@CrossOrigin(origins = "http://127.0.0.1:5500/")
      @GetMapping("/CreateQR")
      public ResponseEntity<byte[]> loquequiera(@RequestParam(required = true) String size, @RequestParam(required = true) String data) {
          
