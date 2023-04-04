@@ -27,5 +27,13 @@ Ver estado del servicio
  - **import org.springframework.web.client.RestClientException** Al importar esta clase, se pueden manejar los errores que pueden ocurrir al ejecutar las solicitudes HTTP y asegurar que la aplicación pueda manejar cualquier error de manera adecuada.
 - **import org.springframework.web.bind.annotation.CrossOrigin** La anotación "CrossOrigin" (@CrossOrigin(origins = {"http://127.0.0.1:5500/","https://202006359.github.io"})) permite a los controladores de Spring configurar y manejar las solicitudes CORS, lo que puede ser útil para permitir que las aplicaciones web realicen solicitudes de origen cruzado y para evitar que las solicitudes sean bloqueadas por los navegadores, i.e. Chrome.
 - **import lombok.extern.slf4j.Slf4j** Para tener un control en tiempo real de lo que va ocurriendo en la ejecución del programa. A través de las funciones log.info y log.error.
+<img width="770" alt="image" src="https://user-images.githubusercontent.com/113789409/229900284-f44a1fe1-46d2-4f86-9af4-af36e35015e1.png">
+
 - **Automator icai/CreateQR/health** Me dice si el servicio de generar QR se ha levantado correctamente
 > http://localhost:8888/icai/CreateQR/health
+<img width="645" alt="image" src="https://user-images.githubusercontent.com/113789409/229899930-fd4d29b5-8e22-46a2-adaf-be429ccdb4a8.png">
+
+
+## Ejemplo visual
+<img width="727" alt="image" src="https://user-images.githubusercontent.com/113789409/229900083-7c4b519f-a4bb-42f5-aac1-3f5b04f42168.png">
+
