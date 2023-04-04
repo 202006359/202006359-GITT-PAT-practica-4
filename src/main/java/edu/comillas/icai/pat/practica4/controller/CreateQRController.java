@@ -8,7 +8,7 @@
  *     Universidad de Comillas - ICAI
  *******************************************************************************/
 
-package edu.comillas.icai.pat.ejemplopat.controller;
+package edu.comillas.icai.pat.practica4.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import edu.comillas.icai.pat.ejemplopat.service.CreateQRService;
+import edu.comillas.icai.pat.practica4.service.CreateQRService;
 
 @RestController
 @RequestMapping("/icai")
@@ -32,8 +32,7 @@ public class CreateQRController implements HealthIndicator{
     @Autowired
     CreateQRService qrService;
 
-    //@CrossOrigin(origins = "http://127.0.0.1:5500/") //Use this to work in local
-    @CrossOrigin(origins = "https://202006359.github.io")
+    @CrossOrigin(origins = {"http://127.0.0.1:5500/","https://202006359.github.io"}) //Use this to work in local and in github pages
     @GetMapping("/CreateQR")
     public ResponseEntity<byte[]> createQR(@RequestParam(required = true) String size, @RequestParam(required = true) String data) {
         log.info("Received request to create QR code with size {} and data {}", size, data);
@@ -55,7 +54,7 @@ public class CreateQRController implements HealthIndicator{
 
     @GetMapping("CreateQR/health")
     @Override
-    public Health health() {
+    public Health health() { //Para ver si el servicio está activo
         try {
             qrService.generarQR("1", "test");
             return Health.up().build();

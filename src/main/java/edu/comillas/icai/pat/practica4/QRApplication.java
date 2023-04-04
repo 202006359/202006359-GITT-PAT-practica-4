@@ -9,16 +9,16 @@
  *******************************************************************************/
 
 
-package edu.comillas.icai.pat.ejemplopat;
+package edu.comillas.icai.pat.practica4;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EjemplopatApplication {
+public class QRApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EjemplopatApplication.class, args);
+		SpringApplication.run(QRApplication.class, args);
 	}
 
 }

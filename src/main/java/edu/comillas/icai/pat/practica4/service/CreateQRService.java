@@ -9,7 +9,7 @@
  *******************************************************************************/
 
 
-package edu.comillas.icai.pat.ejemplopat.service;
+package edu.comillas.icai.pat.practica4.service;
 
 public interface CreateQRService {
   byte[] generarQR(String size, String data) throws Exception;

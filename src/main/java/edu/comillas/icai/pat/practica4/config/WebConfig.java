@@ -1,4 +1,4 @@
-package edu.comillas.icai.pat.ejemplopat.config;
+package edu.comillas.icai.pat.practica4.config;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;

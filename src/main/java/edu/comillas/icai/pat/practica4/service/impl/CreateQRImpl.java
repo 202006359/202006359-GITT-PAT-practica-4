@@ -9,7 +9,7 @@
  *******************************************************************************/
 
 
-package edu.comillas.icai.pat.ejemplopat.service.impl;
+package edu.comillas.icai.pat.practica4.service.impl;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
-import edu.comillas.icai.pat.ejemplopat.service.CreateQRService;
+import edu.comillas.icai.pat.practica4.service.CreateQRService;
 import lombok.extern.slf4j.Slf4j;
 
 
