@@ -3,10 +3,10 @@
 
 La estructura del proyecto es:
 
- - **/controller:** Paquete donde se almacenarán las clases que representan la API-REST del microservicio
- - **/service:** Declaración de la capa de Servicio que será invocada desde la capa API (Controller)
- - **/service/impl:**  Implementación de la capa de servicios. En estas clases se deberá implementar la capa de negocio de nuestros microservicios
- - **/resources/static:** Contenido del HTML, JS y CSS de nuestro portal Web
+ - **/controller:** Paquete donde se almacenán las clases que representan la API-REST del microservicio
+ - **/service:** Declaración de la capa de Servicio que es invocada desde la capa API (Controller)
+ - **/service/impl:**  Implementación de la capa de servicios. En estas clases se implementa la capa de negocio de los microservicios
+ - **/resources/static:** Contenido del HTML, JS y CSS del portal Web
 
 
 ## Operaciones disponibles
