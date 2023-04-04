@@ -15,8 +15,10 @@ El servicio actualmente implementa un servicio de llamada a una API, esta API lo
 
 CrearQR *"CreateQR.html"*
 
-> http://localhost:8888/ REVISAR
-> https://202006359.github.io/202006359-GITT-PAT-practica-4/src/main/resources/static/createQR.html
+> http://localhost:8888/icai/CreateQR?size=160x160&data=https://github.com
+
+Ver estado del servicio
+> http://localhost:8888/icai/CreateQR/health
 
 
 
@@ -25,6 +27,4 @@ CrearQR *"CreateQR.html"*
 - **import org.springframework.web.bind.annotation.CrossOrigin** La anotación "CrossOrigin" permite a los controladores de Spring configurar y manejar las solicitudes CORS, lo que puede ser útil para permitir que las aplicaciones web realicen solicitudes de origen cruzado y para evitar que las solicitudes sean bloqueadas por los navegadores, i.e. Chrome.
 - **import lombok.extern.slf4j.Slf4j** Para tener un control en tiempo real de lo que va ocurriendo en la ejecución del programa. A través de las funciones log.info y log.error.
 - **Automator icai/CreateQR/health** Me dice si el servicio de generar QR se ha levantado correctamente
-
-
-> http://localhost:8888/api/health?name=demo REVISAR
+> http://localhost:8888/icai/CreateQR/health
